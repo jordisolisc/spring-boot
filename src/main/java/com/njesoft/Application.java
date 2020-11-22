@@ -1,4 +1,4 @@
-package com.njesoft.springboot;
+package com.njesoft;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

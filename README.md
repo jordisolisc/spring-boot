@@ -1,3 +1,4 @@
 # spring-boot
 
-Repo to explore all the options about Spring Boot
+Repo to explore options about Spring Boot
+ - actuators, devtools, testController

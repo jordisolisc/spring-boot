@@ -33,3 +33,6 @@ build/
 .vscode/
 /mvnw
 /mvnw.cmd
+/.mvn/wrapper/MavenWrapperDownloader.java
+/.mvn/wrapper/maven-wrapper.properties
+/.mvn/wrapper/maven-wrapper.jar
