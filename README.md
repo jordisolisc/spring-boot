@@ -9,4 +9,4 @@ Repo to explore options about Spring Boot
     > docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql/mysql-server
     
     > docker exec -it mysql mysql -u root -p 
- 
+ - CRUD using Spring Data JPA

@@ -10,7 +10,7 @@ public class IndexController implements ErrorController {
 
     @Override
     public String getErrorPath() {
-        return null;
+        return PATH;
     }
 
     @RequestMapping(PATH)
