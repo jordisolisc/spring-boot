@@ -6,149 +6,288 @@
 	},
 	"item": [
 		{
-			"name": "List all users",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:9090/springboot/user/list",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "9090",
-					"path": [
-						"springboot",
-						"user",
-						"list"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Find one user",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:9090/springboot/user/list/2",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "9090",
-					"path": [
-						"springboot",
-						"user",
-						"list",
-						"2"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Delete a specific user",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:9090/springboot/user/delete/4",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "9090",
-					"path": [
-						"springboot",
-						"user",
-						"delete",
-						"4"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Add user",
-			"protocolProfileBehavior": {
-				"disabledSystemHeaders": {}
-			},
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "",
-						"value": "",
-						"type": "text",
-						"disabled": true
+			"name": "User",
+			"item": [
+				{
+					"name": "List all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/springboot/user/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"springboot",
+								"user",
+								"list"
+							]
+						}
 					},
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"userId\": \"user id 1\",\n    \"userName\": \"user name 1\",\n    \"userPassword\": \"password1\"\n}"
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:9090/springboot/user/add",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "9090",
-					"path": [
-						"springboot",
-						"user",
-						"add"
-					]
+				{
+					"name": "Find one user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/springboot/user/list/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"springboot",
+								"user",
+								"list",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a specific user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/springboot/user/delete/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"springboot",
+								"user",
+								"delete",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 24,\n    \"userId\": \"user id 1\",\n    \"userName\": \"user name 1\",\n    \"userPassword\": \"password24\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9090/springboot/user/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"springboot",
+								"user",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add user",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"user id 1\",\n    \"userName\": \"user name 1\",\n    \"userPassword\": \"password1\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9090/springboot/user/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"springboot",
+								"user",
+								"add"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
-			"name": "Update user",
-			"protocolProfileBehavior": {
-				"disabledSystemHeaders": {}
-			},
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "",
-						"value": "",
-						"type": "text",
-						"disabled": true
+			"name": "Address",
+			"item": [
+				{
+					"name": "Delete a specific address",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/springboot/address/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"springboot",
+								"address",
+								"delete",
+								"1"
+							]
+						}
 					},
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"id\": 24,\n    \"userId\": \"user id 1\",\n    \"userName\": \"user name 1\",\n    \"userPassword\": \"password24\"\n}"
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:9090/springboot/user/add",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "9090",
-					"path": [
-						"springboot",
-						"user",
-						"add"
-					]
+				{
+					"name": "Add Address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"city\": \"city  64\",\n    \"state\": \"state 64\",\n    \"country\": \"country 64\",\n    \"user_id\":3\n\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9090/springboot/address/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"springboot",
+								"address",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\" : 1,\n    \"user_id\": 24,\n    \"city\": \"city  24\",\n    \"state\": \"state 24\",\n    \"country\": \"country 24\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9090/springboot/address/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"springboot",
+								"address",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List All Address",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/springboot/address/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"springboot",
+								"address",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Address By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/springboot/address/list/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"springboot",
+								"address",
+								"list",
+								"1"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			],
+			"protocolProfileBehavior": {}
 		}
 	],
 	"protocolProfileBehavior": {}

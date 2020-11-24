@@ -14,7 +14,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-    private UserService userService;
+    private final UserService userService;
 
     @Autowired
     public UserController(UserService userService) {
@@ -27,8 +27,8 @@ public class UserController {
     }
 
     @RequestMapping("/list/{id}")
-    public Optional<User> findOne(@PathVariable Integer id) {
-        return userService.findOne(id);
+    public Optional<User> findById(@PathVariable Integer id) {
+        return userService.findById(id);
     }
 
     @RequestMapping("/add")

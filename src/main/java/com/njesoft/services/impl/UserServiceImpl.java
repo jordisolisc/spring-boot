@@ -12,11 +12,11 @@ import java.util.Optional;
 @Service
 public class UserServiceImpl implements UserService {
 
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     @Autowired
     public UserServiceImpl(UserRepository userRepository) {
-        this.userRepository=userRepository;
+        this.userRepository = userRepository;
     }
 
     @Override
@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Optional<User> findOne(Integer id) {
+    public Optional<User> findById(Integer id) {
         return userRepository.findById(id);
     }
 

@@ -2,31 +2,19 @@ package com.njesoft.model;
 
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
-/**
- *
- */
+
 @Entity
-public class User {
+public class User extends AbstractPersistable<Integer> {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
     private String userId;
     private String userName;
     private String password;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    @OneToMany(targetEntity = Address.class, mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private Set<Address> addresses;
 
     public String getUserId() {
         return userId;

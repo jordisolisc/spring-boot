@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface UserService {
     List<User> userList();
 
-    Optional<User> findOne(Integer id);
+    Optional<User> findById(Integer id);
 
     User addUser(User user);
 
