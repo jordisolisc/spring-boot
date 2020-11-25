@@ -19,7 +19,7 @@ public class LoggerAspect {
 
     }
 
-    @AfterThrowing(value = "generalPointcut() throws Exception" , throwing = "ex")
+    @AfterThrowing(pointcut  = "generalPointcut() throws Exception" , throwing = "ex")
     private void exceptionLog(JoinPoint joinPoint, Exception ex) throws Exception{
         logger.error(joinPoint.getTarget().getClass().getSimpleName() + " : " + joinPoint.getSignature().getName()+ " : " +ex.getMessage());
 
