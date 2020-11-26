@@ -14,3 +14,4 @@ Repo to explore options about Spring Boot
  - Add Aspect Oriented programming (AOP)
  - Add SpringBoot Scheduler Task
  - Execute Manual Job using Spring Batch
+ - Spring Basic Security
