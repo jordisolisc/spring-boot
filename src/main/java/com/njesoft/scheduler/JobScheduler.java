@@ -23,22 +23,22 @@ public class JobScheduler {
         this.addressService = addressService;
     }
 
-    @Scheduled(cron = "*/5 * * * * *")
+//    @Scheduled(cron = "*/5 * * * * *")
     public void schedulerUsingCronExpression(){
         logger.info(userService.userList());
     }
 
-    @Scheduled(fixedDelay = 1000, initialDelay = 1000)
+//    @Scheduled(fixedDelay = 1000, initialDelay = 1000)
     public void schedulerUsingFixedDelayWithInitialDelay(){
         logger.info(userService.findById(4));
     }
 
-    @Scheduled(fixedDelay = 1000)
+//    @Scheduled(fixedDelay = 1000)
     public void schedulerUsingDelay(){
         logger.info(addressService.addressList());
     }
 
-    @Scheduled(fixedRate = 5000)
+//    @Scheduled(fixedRate = 5000)
     public void schedulerUsingRate(){
         logger.info(addressService.findById(5));
 

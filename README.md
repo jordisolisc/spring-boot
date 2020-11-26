@@ -10,3 +10,7 @@ Repo to explore options about Spring Boot
     
     > docker exec -it mysql mysql -u root -p 
  - CRUD using Spring Data JPA
+ - Add One to Many relationship
+ - Add Aspect Oriented programming (AOP)
+ - Add SpringBoot Scheduler Task
+ - Execute Manual Job using Spring Batch

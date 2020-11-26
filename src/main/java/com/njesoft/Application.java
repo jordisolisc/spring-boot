@@ -1,10 +1,10 @@
 package com.njesoft;
 
+import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 
-//@EntityScan("com.njesoft.model")
+@EnableBatchProcessing
 @SpringBootApplication
 public class Application {
 
