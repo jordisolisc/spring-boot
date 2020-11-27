@@ -22,8 +22,8 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
     @RequestMapping("/list")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public List<User> userList() {
         return userService.userList();
     }
@@ -37,8 +37,8 @@ public class UserController {
         return userService.addUser(user);
     }
 
-    @PreAuthorize("hasRole('ROLE_ADMIN')" )
     @RequestMapping("/delete/{id}")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public String deleteUser(@PathVariable Integer id) {
         return userService.deleteUser(id);
     }
