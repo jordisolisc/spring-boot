@@ -13,6 +13,10 @@ public class User extends AbstractPersistable<Integer> {
     private String userName;
     private String password;
 
+    @ManyToOne
+    @JoinColumn(name = "role_id")
+    private Role role;
+
     @OneToMany(targetEntity = Address.class, mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Set<Address> addresses;
 
@@ -38,5 +42,13 @@ public class User extends AbstractPersistable<Integer> {
 
     public void setUserPassword(String password) {
         this.password = password;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 }

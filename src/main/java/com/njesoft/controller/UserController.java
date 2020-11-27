@@ -3,6 +3,7 @@ package com.njesoft.controller;
 import com.njesoft.model.User;
 import com.njesoft.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +22,7 @@ public class UserController {
         this.userService = userService;
     }
 
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
     @RequestMapping("/list")
     public List<User> userList() {
         return userService.userList();
@@ -30,12 +32,12 @@ public class UserController {
     public Optional<User> findById(@PathVariable Integer id) {
         return userService.findById(id);
     }
-
     @RequestMapping("/add")
     public User addUser(@RequestBody User user) {
         return userService.addUser(user);
     }
 
+    @PreAuthorize("hasRole('ROLE_ADMIN')" )
     @RequestMapping("/delete/{id}")
     public String deleteUser(@PathVariable Integer id) {
         return userService.deleteUser(id);

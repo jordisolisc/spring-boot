@@ -15,3 +15,4 @@ Repo to explore options about Spring Boot
  - Add SpringBoot Scheduler Task
  - Execute Manual Job using Spring Batch
  - Spring Basic Security
+ - Advanced Authentication using Spring Security
