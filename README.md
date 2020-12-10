@@ -16,3 +16,4 @@ Repo to explore options about Spring Boot
  - Execute Manual Job using Spring Batch
  - Spring Basic Security
  - Advanced Authentication using Spring Security
+ - Renamed application.properties with custom names
